@@ -68,7 +68,6 @@ class Point(object):
         return Point(dx, dy)
 
     def get_number_of_moves_made(self):
-        self.moved_by = 
         self.moved_by = self.moved_by + 1
         return self.moved_by
 

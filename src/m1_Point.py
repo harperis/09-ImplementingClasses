@@ -54,7 +54,6 @@ class Point(object):
         self.start_x = x
         self.start_y = y
 
-
     def __repr__(self):
         return 'Point({}, {})'.format(self.x, self.y)
 
@@ -84,7 +83,7 @@ class Point(object):
         return self.get_distance_from(Point(self.start_x, self.start_y))
 
     def get_distance_traveled(self):
-        return self.get_distance_from(self.move_to())
+        return self.get_distance_from_start()
 
     def closer_to(self, point, point_2):
         if self.get_distance_from(point) < self.get_distance_from(point_2):
@@ -906,7 +905,7 @@ def run_test_get_distance_traveled():
         print('Actual:', p4.get_distance_traveled())
     """
     # --------------------------------------------------------------------------
-    # TODO: 11.  Follow the same instructions as in _TODO_ 3 above,
+    # Done: 11.  Follow the same instructions as in _TODO_ 3 above,
     #    but for the  get_distance_traveled  method specified above.
     # --------------------------------------------------------------------------
     print()
